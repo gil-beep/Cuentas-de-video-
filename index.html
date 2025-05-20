@@ -1,71 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>    <title>El significado de Esculapio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Hackiada</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .mensaje {
+      color: #00ff00;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .oculto {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .botones {
+      display: flex;
+      gap: 1rem;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #222;
+      color: white;
+      border: 2px solid #00ff00;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00ff00;
+      color: black;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        body {
-          background-color: #f0f0f0; /* Gris claro */
-          background-image: url('fondo.jpg'); /* Imagen de fondo */
-          background-size: cover;
-        }
-      </style>
-      <style>
-        .mi-titulo {  /* ¡Mismo nombre! */
-          color: #000000; 
-          font-family: "Times New Roman";
-          text-decoration: underline;
-        }
-      
-        .caja {  /* ¡Mismo nombre! */
-          border: 3px dashed #003347;
-          background-color: #f9f9f9;
-        }
-      </style>
-      
-      <h2 class="mi-titulo">El significado de Esculapio</h2>
-      <div class="caja">Esculapio" es el nombre de un dios de la mitología griega, conocido como Esculapio (Asclepio en griego), quien era el dios de la medicina y la curación. Era hijo de Apolo y coronado como el dios de la salud. En la mitología, Esculapio se consideraba capaz de curar enfermedades y, en algunos relatos, incluso de resucitar a los muertos, lo que le ganó la ira de Zeus, quien lo mató para evitar que desafiara el orden divino</div>
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Black Esculapio Button</title>
-          <style>
-              /* Black h3 button - class name remains unchanged */
-              .h3-button {
-                  display: inline-block;
-                  background-color: #000000; /* Pure black */
-                  color: white;
-                  padding: 12px 24px;
-                  text-align: center;
-                  text-decoration: none;
-                  font-size: 1.17em;
-                  font-weight: bold;
-                  margin: 10px 0;
-                  cursor: pointer;
-                  border-radius: 6px;
-                  border: none;
-                  transition: all 0.3s;
-                  font-family: Arial, sans-serif;
-                  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-              }
-      
-              .h3-button:hover {
-                  background-color: #333333; /* Dark gray on hover */
-                  transform: translateY(-2px);
-                  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-              }
-          </style>
-      </head>
-      <body>
-          <!-- Black h3 button with your link -->
-          <h3 class="h3-button" id="esculapioH3Button" 
-              onclick="window.location.href='https://www.google.com/search?vsrid=CKqa7YqngL7YhAEQAhgBIiQxYzBjYjMwMy1lMjYyLTRmNjktYTIzNi0xY2Y1OWY0NDU1NmM&gsessionid=Xt2dlzT2KhmrgXl9Fw0zLWg1kxOvyfEYbDFyVV5EepGe9m8GLgEd_g&lsessionid=0vJ3Lm5W6kv8Jm3eSsXOYqFfnJ7WaA2qpQ-UEh7r-kPn4WKJl79bNQ&vsdim=420,420&vsint=CAIqDAoCCAcSAggKGAEgATojChYNAAAAPxUAAAA_HQAAgD8lAACAPzABEKQDGKQDJQAAgD8&lns_mode=un&source=lns.web.gsbubu&udm=26&lns_surface=26&lns_vfs=e&qsubts=1743640118330&biw=1366&bih=633&hl=es-419'">
-              QUERES VER ESCULAPIO?
-          </h3>
-      </body>
-      </html>
+  <div id="mensaje" class="mensaje oculto">fueron hackiados</div>
+  <div class="botones">
+    <button onclick="mostrarMensaje()">wonder</button>
+    <button onclick="mostrarMensaje()">dormir</button>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensaje');
+      mensaje.classList.remove('oculto');
+    }
+  </script>
+</body>
+</html>
