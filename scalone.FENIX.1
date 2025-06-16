@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vota a los mejores jugadores de Sayago</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vota a los mejores jugadores de Sayago</h1>
+        <form action="/submit_vote" method="post">
+            <p class="form-label">Selecciona a un jugador:</p>
+            <select name="player_name" class="form-control">
+                <option value="Dona">Dona</option>
+                <option value="Gio">Gio</option>
+                <option value="Scalone">Scalone</option>
+                <option value="Juani">Juani</option>
+                <option value="Tacua">Tacua</option>
+                <option value="Thiago L">Thiago L</option>
+                <option value="Emi">Emi</option>
+                <option value="Mate M">Mate M</option>
+                <option value="Rodri">Rodri</option>
+                <option value="Mateo A">Mateo A</option>
+                <option value="Diego">Diego</option>
+                <option value="Iñaki">Iñaki</option>
+                <option value="Thiago chico">Thiago chico</option>
+                <option value="Rama">Rama</option>
+            </select><br>
+            
+            <p class="form-label">¿Por qué crees que es el mejor jugador de Sayago?</p>
+            <textarea name="reason" required class="form-control"></textarea><br><br>
+            
+            <input type="submit" value="Votar" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>
 
