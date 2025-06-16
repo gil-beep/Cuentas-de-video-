@@ -1,68 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Hackiada</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #111;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-
-    .mensaje {
-      color: #00ff00;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      transition: opacity 0.3s ease;
-    }
-
-    .oculto {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .botones {
-      display: flex;
-      gap: 1rem;
-    }
-
-    button {
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      background-color: #222;
-      color: white;
-      border: 2px solid #00ff00;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #00ff00;
-      color: black;
-    }
-  </style>
+    <title>Vota a los mejores jugadores de Sayago</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <div id="mensaje" class="mensaje oculto">fueron hackiados</div>
-  <div class="botones">
-    <button onclick="mostrarMensaje()">wonder</button>
-    <button onclick="mostrarMensaje()">dormir</button>
-  </div>
-
-  <script>
-    function mostrarMensaje() {
-      const mensaje = document.getElementById('mensaje');
-      mensaje.classList.remove('oculto');
-    }
-  </script>
+    <div class="container">
+        <h1>Vota a los mejores jugadores de Sayago</h1>
+        <form action="/submit_vote" method="post">
+            <p class="form-label">Selecciona a un jugador:</p>
+            <select name="player_name" class="form-control">
+                <option value="Dona">Dona</option>
+                <option value="Gio">Gio</option>
+                <option value="Scalone">Scalone</option>
+                <option value="Juani">Juani</option>
+                <option value="Tacua">Tacua</option>
+                <option value="Thiago L">Thiago L</option>
+                <option value="Emi">Emi</option>
+                <option value="Mate M">Mate M</option>
+                <option value="Rodri">Rodri</option>
+                <option value="Mateo A">Mateo A</option>
+                <option value="Diego">Diego</option>
+                <option value="Iñaki">Iñaki</option>
+                <option value="Thiago chico">Thiago chico</option>
+                <option value="Rama">Rama</option>
+            </select><br>
+            
+            <p class="form-label">¿Por qué crees que es el mejor jugador de Sayago?</p>
+            <textarea name="reason" required class="form-control"></textarea><br><br>
+            
+            <input type="submit" value="Votar" class="submit-button">
+        </form>
+    </div>
 </body>
 </html>
